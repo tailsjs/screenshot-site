@@ -17,7 +17,7 @@ siteShot.getUrl(1000, 1000, "jpeg", "github.com")
 ## Возращается:
 
 ```js
-string: http://mini.s-shot.ru/1000/1000/jpeg/?github.com
+string: "http://mini.s-shot.ru/1000/1000/jpeg/?github.com"
 ```
 
 Рассмотрим немного

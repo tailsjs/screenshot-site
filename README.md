@@ -11,18 +11,18 @@ npm install screenshot-site
 ```js
 let siteShot = require("screenshot-site") 
 
-siteShot.getUrl(1000, 1000, "jpeg", "github.com")
+siteShot(1000, 1000, "jpeg", "github.com")
 ```
 
 ## Возращается:
 
 ```js
-string: "http://mini.s-shot.ru/1000/1000/jpeg/?github.com"
+string: http://mini.s-shot.ru/1000/1000/jpeg/?github.com
 ```
 
 Рассмотрим немного
 ```js
-siteShot.getUrl(разрешение, размер, "формат", "ссылка")
+siteShot(разрешение, размер, "формат", "ссылка")
 ```
 
 * разрешение - указывается в пикселях, например (1024x768), для полноразмерного скриншота указываем только ширину (1024)

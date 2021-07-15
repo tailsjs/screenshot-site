@@ -1,7 +1,7 @@
 {
   "name": "screenshot-site",
-  "version": "1.0.2add",
-  "description": "Модуль NodeJS, который скриншотит сайты.",
+  "version": "2.0.0",
+  "description": "Модуль NodeJS, который скриншотит сайты. Уже реально скриншотит сайты",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,15 +14,19 @@
     "site-shot",
     "screenshot",
     "site",
-	"png",
-	"screen",
-	"siteshot",
-	"shot"
+    "png",
+    "screen",
+    "siteshot",
+    "shot"
   ],
   "author": "tailsjs",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tailsjs/screenshot-site/issues"
   },
-  "homepage": "https://github.com/tailsjs/screenshot-site#readme"
+  "homepage": "https://github.com/tailsjs/screenshot-site#readme",
+  "dependencies": {
+    "fs": "*",
+    "request": "^2.88.2"
+  }
 }

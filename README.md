@@ -1,7 +1,7 @@
 # screenshot-site [FREE EDITION]
 Скриншотер сайтов. Теперь уже точно [FREE EDITION]
 
-* Минус: Через некоторое время, банит ваш IP. Рекомендую использовать с прокси/vpn, пока я не введу эту возможность.
+* Минус: Через некоторое время, банит ваш IP. Рекомендую использовать с прокси.
 
 ## Установка: 
 
@@ -28,7 +28,8 @@ shot({
     scale: 1000, // isNeed? false; default: 1000,
     format: 1, // isNeed? false; default: 0; 0 for JPEG, 1 for PNG
     api: 1, // isNeed? false; default: 0; 0 for "mini", 1 for "api".
-    filename: "./screen.png" // isNeed? false; default: "screenshot.png"
+    filename: "./screen.png", // isNeed? false; default: "screenshot.png"
+    proxy: "127.0.0.1:8080" // isNeed? false
 }, function(){ return console.log('Готово!') }) // isNeed? true
 ```
 ### Параметры:
@@ -39,6 +40,8 @@ shot({
 |scale|number|false|Ширина скрина|
 |format|number|false|Формат скрина (0 для jpg, 1 для png)|
 |api|number|false|Какой API использовать? (0 для mini, 1 для api)|
-|filename|string|false|куда сохранять пикчу и как назвать|
+|filename|string|false|Куда сохранять скриншот и как назвать|
+|proxy|string|false|Прокси|
 
 * После параметров, необходимо вставить callback.
+* В поле proxy необязательно вставлять http://

@@ -15,8 +15,8 @@ let shot = require("screenshot-site")
 
 shot({
     url: "github.com"
-}, function(){
-    return console.log('Готово!')
+}, function(buffer){
+    return console.log(buffer)
 })
 ```
 
@@ -28,9 +28,8 @@ shot({
     scale: 1000, // isNeed? false; default: 1000,
     format: 1, // isNeed? false; default: 0; 0 for JPEG, 1 for PNG
     api: 1, // isNeed? false; default: 0; 0 for "mini", 1 for "api".
-    filename: "./screen.png", // isNeed? false; default: "screenshot.png"
     proxy: "127.0.0.1:8080" // isNeed? false
-}, function(){ return console.log('Готово!') }) // isNeed? true
+}, function(buffer){ return console.log(buffer) }) // isNeed? true; response: image buffer
 ```
 ### Параметры:
 |Параметр|Тип|Нужен|Описание|
@@ -40,8 +39,6 @@ shot({
 |scale|number|false|Ширина скрина|
 |format|number|false|Формат скрина (0 для jpg, 1 для png)|
 |api|number|false|Какой API использовать? (0 для mini, 1 для api)|
-|filename|string|false|Куда сохранять скриншот и как назвать|
 |proxy|string|false|Прокси|
 
 * После параметров, необходимо вставить callback.
-* В поле proxy необязательно вставлять http://

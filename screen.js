@@ -9,7 +9,7 @@ shot({
     //proxy: "YOUR_PROXY" // isNeed? false
 }, function(buffer){ // isNeed? true; response: buffer
     /*
-    ** ЗДЕСЬ ВОЗВРАЩАЕТСЯ buffer КАРТИНКИ.
+    ** ЗДЕСЬ ВОЗВРАЩАЕТСЯ БУФЕР КАРТИНКИ.
     */
    return console.log(buffer)
 })

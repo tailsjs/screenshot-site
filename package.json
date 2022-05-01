@@ -1,6 +1,6 @@
 {
   "name": "screenshot-site",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Модуль NodeJS, который скриншотит сайты. Уже реально скриншотит сайты",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/tailsjs/screenshot-site#readme",
   "dependencies": {
-    "fs": "*",
     "node-fetch": "^2.6.1",
     "proxy-agent": "^5.0.0"
   }

@@ -1,6 +1,6 @@
 {
   "name": "screenshot-site",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Модуль NodeJS, который скриншотит сайты. Уже реально скриншотит сайты",
   "main": "index.js",
   "scripts": {

@@ -11,9 +11,9 @@ module.exports = function(params = {
 }, callback = Function){ 
 	if(!params.url)throw new Error('Required parameter not specified: URL');
 	if(!callback)throw new Error('No callback!');
-	uri = `http://${apis[params.api]}.s-shot.ru/${params.resolution}/${params.scale}/${formats[params.format]}/?${params.url}`;
+	const uri = `http://${apis[params.api]}.s-shot.ru/${params.resolution}/${params.scale}/${formats[params.format]}/?${params.url}`;
 	
-	if(params.proxy && !/^(socks|https{0,1})/.test(params.proxy))throw new Error('VPNError: undefined type of protocol')
+	if(params.proxy && !/^(socks[4-5]{0,1}|(pac\+){0,1}+https{0,1})/.test(params.proxy))throw new Error('VPNError: undefined type of protocol')
 	fetch(uri, params.proxy ? {
 		agent: new ProxyAgent(params.proxy)
 	} : undefined).then(async function(res){

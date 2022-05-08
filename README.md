@@ -20,7 +20,7 @@ shot({
 })
 ```
 
-## Описание функции:
+## Пример параметров:
 ```js
 shot({
     url: "github.com", // isNeed? true
@@ -28,10 +28,12 @@ shot({
     scale: 1000, // isNeed? false; default: 1000,
     format: 1, // isNeed? false; default: 0; 0 for JPEG, 1 for PNG
     api: 1, // isNeed? false; default: 0; 0 for "mini", 1 for "api".
-    proxy: "127.0.0.1:8080" // isNeed? false
-}, function(buffer){ return console.log(buffer) }) // isNeed? true; response: image buffer
+    proxy: "http://127.0.0.1:8080" // isNeed? false
+}, function(buffer){ 
+    return console.log(buffer) 
+}) // isNeed? true; response: image buffer
 ```
-### Параметры:
+## Параметры:
 |Параметр|Тип|Нужен|Описание|
 |-|-|-|-|
 |url|string|true|Ссылка|
@@ -41,4 +43,12 @@ shot({
 |api|number|false|Какой API использовать? (0 для mini, 1 для api)|
 |proxy|string|false|Прокси|
 
-* После параметров, необходимо вставить callback.
+### Прокси
+Поддерживаются:
+1. http (http://)
+2. https (https://)
+3. socks (socks://)
+4. socks4 (socks4://) или socks5 (socks5://)
+5. pac (pac+http://)
+
+### После параметров, необходимо вставить callback.
